@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+venv/
+.env
+*.egg-info/
+.hypothesis/
+.pytest_cache/
+
+# ML artifacts (generated at build time)
+backend/*.pkl
+backend/*.txt
+backend/KDDTrain+.txt
+backend/KDDTest+.txt
+
+# Node
+node_modules/
+frontend/dist/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.kiro/
+
+# Misc
+ml/
+tests/

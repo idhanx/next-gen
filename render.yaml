@@ -1,0 +1,24 @@
+services:
+  # Python API backend
+  - type: web
+    name: ngtd-backend
+    runtime: python
+    rootDir: backend
+    buildCommand: pip install -r requirements.txt && python train_nslkdd.py
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: PYTHON_VERSION
+        value: "3.11.0"
+
+  # React frontend (static site)
+  - type: web
+    name: ngtd-frontend
+    runtime: node
+    rootDir: frontend
+    buildCommand: npm install && npm run build
+    startCommand: npx serve dist -l $PORT
+    envVars:
+      - key: NODE_VERSION
+        value: "20.11.0"
+      - key: VITE_API_URL
+        value: https://ngtd-backend.onrender.com
