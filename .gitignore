@@ -8,9 +8,8 @@ venv/
 .hypothesis/
 .pytest_cache/
 
-# ML artifacts (generated at build time)
+# ML artifacts (generated at build time on Render)
 backend/*.pkl
-backend/*.txt
 backend/KDDTrain+.txt
 backend/KDDTest+.txt
 
@@ -26,6 +25,8 @@ Thumbs.db
 .vscode/
 .kiro/
 
-# Misc
+# Old spec files
 ml/
 tests/
+backend/db/
+backend/__pycache__/
